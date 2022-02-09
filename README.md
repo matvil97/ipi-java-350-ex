@@ -11,7 +11,7 @@ ou un autre IDE si vous avez l'habitude (Eclipse)
 ## Introduction
 
 Questions à se poser : 
-- Que représente pour vous la qualité logicielle ?
+- Que eprésente pour vous la qualité logicielle ?
 - Quels éléments faut-il pour avoir un logiciel de qualité ?
 - Dans un projet, qui est responsable de la qualité ?
 - Quand doit-on se préoccuper de la qualité dans la vie d'un projet ?
