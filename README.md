@@ -5,7 +5,7 @@ Exercices de Java, module 350 pour l'IPI. Il est nécessaire de forker ce reposi
 ## Pré-requis
 
 - Installer IntelliJ Ultimate en utilisant votre adresse IPI sur Jetbrains Student https://www.jetbrains.com/student/
-ou un autre IDE si vous avez l'habitude (Eclipse)
+ou une autre IDE si vous avez l'habitude (Eclipse)
 - Si vous n'êtes pas familié avec Git, je vous recommande ce site : https://learngitbranching.js.org/ (faire au moins la première leçon du niveau 1)
 
 ## Introduction
