@@ -84,7 +84,7 @@ Tester de façon intégrée un cas nominal de la méthode `embaucheEmploye` de l
 
 
 # Evaluation
-Commencer par faire une branche `eval` à partir de votre branche `master` une fois le TP terminé. Travailler sur cette branche pour l'évaluation.
+Commence par faire une branche `eval` à partir de votre branche `master` une fois le TP terminé. Travailler sur cette branche pour l'évaluation.
 ## Tests unitaires et TDD
 - Tester de manière unitaire le plus exhaustivement possible la méthode `augmenterSalaire` d'`Employe` en essayant de faire du TDD. Décommenter la méthode dans `Employe` et écrire d'abord les tests entièrement (en réflechissant particulièrement aux cas limites) avant d'écrire la méthode. Pensez-vous que vous auriez écrit la méthode directement comme cela si vous n'aviez pas écrit les tests en premier ?
 - Tester unitairement (en utilisant les tests paramétrés) la méthode `getNbConges` d'`Employe`.
