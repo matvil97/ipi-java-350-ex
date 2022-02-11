@@ -119,8 +119,11 @@ public class Employe {
         return prime * this.tempsPartiel;
     }
 
-    //Augmenter salaire
-    //public void augmenterSalaire(double pourcentage){}
+    public void augmenterSalaire(Double pourcentage){
+        if (pourcentage != null && pourcentage > 0){
+            this.salaire=this.salaire * (1 + pourcentage/100);
+        }
+    }
 
     public Long getId() {
         return id;
@@ -229,13 +232,11 @@ public class Employe {
                 Objects.equals(dateEmbauche, employe.dateEmbauche) &&
                 Objects.equals(salaire, employe.salaire) &&
                 Objects.equals(performance, employe.performance);
+
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(id, nom, prenom, matricule, dateEmbauche, salaire, performance);
-    }
-
-    public void augmenterSalaire(double v) {
     }
 }

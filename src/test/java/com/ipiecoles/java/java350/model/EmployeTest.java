@@ -81,7 +81,7 @@ public class EmployeTest {
         Employe employe = new Employe("Ronaldo", "Cristiano", "M15697", LocalDate.now(), 1000d, 1, 1.0);
         Double salaireStart = employe.getSalaire();
 
-        employe.augmenterSalaire(1);
+        employe.augmenterSalaire(pourcentage);
         Assertions.assertThat(employe.getSalaire()).isEqualTo(salaireStart);
 
     }
