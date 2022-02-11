@@ -38,12 +38,12 @@ public class EmployeTest {
             "'T12345', 0, 1.0, 1, 1000.0",
             "'T12345', 1, 1.0, 1, 1100.0",
             ", 0, 1.0, 1, 1000.0",
+            "'T12345', 0, 0.5, 1, 500.0",
             "'T12345', 0, 1.0,, 1000.0",
             "'T12345', 0, 1.0, 3, 3300.0",
             "'T12345', 4, 1.0, 3, 3700.0",
-            "'T12345', 0, 0.5, 1, 500.0"
     })
-    public void testPrimeManagerSansAncienneteTempsPlein(
+    public void testPrimeManagerSansAnciennete(
             String matricule,
             Integer nbAnneeAnciennete,
             Double tauxActivite,
@@ -52,7 +52,7 @@ public class EmployeTest {
     ) {
 
         Employe testEmploye = new Employe("Messi", "Lionel",
-                matricule, LocalDate.now().minusYears(nbAnneeAnciennete), 2000d, performance, tauxActivite);
+                matricule, LocalDate.now().minusYears(nbAnneeAnciennete), 1000d, performance, tauxActivite);
 
         Double prime = testEmploye.getPrimeAnnuelle();
 
@@ -61,7 +61,7 @@ public class EmployeTest {
     }
 
     @Test
-    public void augmenterSalaireTestPositif() {
+    public void augmenterSalaireTestTrue() {
 
         Employe employe = new Employe("Ronaldo", "Cristiano", "M15697", LocalDate.now(), 1000d, 1, 1.0);
 
@@ -76,12 +76,12 @@ public class EmployeTest {
             ",",
             "0"
     })
-    public void augmenterSalaireTestNullOuNégatif(Double pourcentage) {
+    public void augmenterSalaireTestNullOrFalse(Double pourcentage) {
 
         Employe employe = new Employe("Ronaldo", "Cristiano", "M15697", LocalDate.now(), 1000d, 1, 1.0);
         Double salaireStart = employe.getSalaire();
 
-        employe.augmenterSalaire(3.6);
+        employe.augmenterSalaire(1);
         Assertions.assertThat(employe.getSalaire()).isEqualTo(salaireStart);
 
     }
@@ -91,7 +91,7 @@ public class EmployeTest {
             "5, 30",
             "0, 25"
     })
-    public void getNbCongesTest(Integer nbAnneeAnciennete, Integer resultat) {
+    public void getNombresCongesTest(Integer nbAnneeAnciennete, Integer resultat) {
 
         Employe employe = new Employe("Ronaldo", "Cristiano", "M15697", LocalDate.now().minusYears(nbAnneeAnciennete), 1000d, 1, 1.0);
 

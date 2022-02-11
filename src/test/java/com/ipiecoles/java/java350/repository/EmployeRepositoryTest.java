@@ -27,14 +27,14 @@ public class EmployeRepositoryTest {
     }
 
     @Test
-    public void findLastMatriculeTestFullWithLetter() {
+    public void findLastMatriculeFullWithLetter() {
 
         employeRepository.deleteAll();
 
         Employe employeMessi = employeRepository.save(new Employe("Messi", "Lionel", "T12345", LocalDate.now(), 1000d, 1, 1.0));
         Employe employeRonaldo = employeRepository.save(new Employe("Ronaldo", "Cristiano", "M15697", LocalDate.now(), 1000d, 1, 1.0));
-        Employe employeSparrow = employeRepository.save(new Employe("Mbappe", "Kylian", "T64978", LocalDate.now(), 1000d, 1, 1.0));
-        Employe employePutin = employeRepository.save(new Employe("Veratti", "Marco", "C49785", LocalDate.now(), 1000d, 1, 1.0));
+        Employe employeMbappe = employeRepository.save(new Employe("Mbappe", "Kylian", "T64978", LocalDate.now(), 1000d, 1, 1.0));
+        Employe employeVeratti = employeRepository.save(new Employe("Veratti", "Marco", "C49785", LocalDate.now(), 1000d, 1, 1.0));
 
         String result = employeRepository.findLastMatricule();
 
@@ -43,7 +43,7 @@ public class EmployeRepositoryTest {
     }
 
     @Test()
-    public void avgPerformanceWhereMatriculeStartsWithTestEmptyList() {
+    public void avgPerformanceWhereMatriculeStartsWithEmptyList() {
 
         employeRepository.deleteAll();
 
@@ -84,17 +84,17 @@ public class EmployeRepositoryTest {
             "C, 3",
             ","
     })
-    public void avgPerformanceWhereMatriculeStartsWithTestList( Double resultat ,String letter) {
+    public void avgPerformanceWhereMatriculeStartsWithSoloList(String letter, Double resultat) {
 
-        employeRepository.deleteAll();
+            employeRepository.deleteAll();
 
-        Employe employeRonaldo = employeRepository.save(new Employe("Ronaldo", "Cristiano", "M15697", LocalDate.now(), 1000d, 5, 1.0));
-        Employe employeMessi = employeRepository.save(new Employe("Messi", "Lionel", "T12345", LocalDate.now(), 1000d, 9, 1.0));
-        Employe employeHaaland = employeRepository.save(new Employe("Veratti", "Marco", "C49785", LocalDate.now(), 1000d, 3, 1.0));
+            Employe employeRonaldo = employeRepository.save(new Employe("Ronaldo", "Cristiano", "M15697", LocalDate.now(), 1036d, 5, 1.0));
+            Employe employeMessi = employeRepository.save(new Employe("Messi", "Lionel", "T12345", LocalDate.now(), 1036d, 9, 1.0));
+            Employe employeVeratti = employeRepository.save(new Employe("Veratti", "Marco", "C49785", LocalDate.now(), 1036d, 3, 1.0));
 
-        Double functionResult = employeRepository.avgPerformanceWhereMatriculeStartsWith(letter);
+            Double functionResult = employeRepository.avgPerformanceWhereMatriculeStartsWith(letter);
 
-        Assertions.assertThat(functionResult).isEqualTo(resultat);
+            Assertions.assertThat(functionResult).isEqualTo(resultat);
 
     }
 
